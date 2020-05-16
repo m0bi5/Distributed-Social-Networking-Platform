@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block content %}
+    <h1 class="center-align">Register</h1>
+    <form method="POST" action="/register">
+        <div class="row">
+            <div class="input-field col s12 m6 offset-m3">
+                <input id="firstName" name="firstName" type="text">
+                <label for="firstName">First Name</label>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="input-field col s12 m6 offset-m3">
+                <input id="lastName" name="lastName" type="text">
+                <label for="lastName">Last name</label>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="input-field col s12 m6 offset-m3">
+                <input id="status" name="status" type="text">
+                <label for="status">Status</label>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="input-field col s12 m6 offset-m3">
+                <input id="email" name="email" type="text">
+                <label for="email">Email</label>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="input-field col s12 m6 offset-m3">
+                <input id="password" name="password" type="password">
+                <label for="password">Password</label>
+            </div>
+        </div>
+        <div class="row center-align">
+            <button class="waves-effect waves-light btn">Register</button>
+        </div>
+        
+                    
+    </form>
+{% endblock %}

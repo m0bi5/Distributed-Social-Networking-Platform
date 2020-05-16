@@ -1,0 +1,27 @@
+Users
+--------
+userId
+firstName
+lastName
+email
+status
+password
+
+create table Users(userId int AUTO_INCREMENT,email varchar(255),password varchar(77), firstName varchar(255),lastName varchar(255), status varchar(255), PRIMARY KEY(userId));
+
+Posts
+-------
+userId
+postId
+text
+dateTime
+
+create table Posts(postId int AUTO_INCREMENT,userId int,text varchar(255),dateTime varchar(255), PRIMARY KEY(postId));
+
+
+Friends
+---------
+userId
+friendId
+
+create table Friends(userId int,friendId int);
