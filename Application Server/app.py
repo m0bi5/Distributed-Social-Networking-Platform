@@ -5,7 +5,7 @@ import json
 
 app = Flask(__name__)
 app.secret_key = "askjhahfsdhjf"
-loadBalancer='http://localhost:5000'
+loadBalancer='http://localhost:4000'
 myUrl='http://localhost:8000'
 
 def dbInteractor(url,*args):
