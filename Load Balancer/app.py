@@ -17,7 +17,7 @@ def pickServer():
     counter+=1
     return dbServers[hashId]
 
-@app.route('/<path:url>', methods=['POST'])
+@app.route('/<path:url>', methods=['GET','POST'])
 def balancer(url):
     routeTo=pickServer()
     resp = requests.request(
