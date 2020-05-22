@@ -36,7 +36,7 @@ def changeDB(hashId):
     print("Accessing database ",hashId," with url ",app.config['SQLALCHEMY_DATABASE_URI'])
     app.config['SQLALCHEMY_DATABASE_URI']=dbString[hashId]
 
-@app.route('/register/<email>/<password>/<firstName>/<lastName>/<status>', methods=['GET'])
+@app.route('/register/<email>/<password>/<firstName>/<lastName>/<status>', methods=['GET','POST'])
 def register(email,password,firstName,lastName,status):
     rows=[]
     newUserId=0
@@ -54,7 +54,7 @@ def register(email,password,firstName,lastName,status):
     db.engine.execute("insert into Users (userId,email,password,firstName,lastName,status) values (%s,'%s','%s','%s','%s','%s')"%(newUserId,email,password,firstName,lastName,status))
     return json.dumps(True)
 
-@app.route('/login/<email>/<password>', methods=['GET'])
+@app.route('/login/<email>/<password>', methods=['GET','POST'])
 def login(email,password):
     rows=[]
     userRecord=None
